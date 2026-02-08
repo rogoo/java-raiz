@@ -4,41 +4,215 @@
 package br.rosa.generated;
 
 
-import br.rosa.generated.tables.Address;
-import br.rosa.generated.tables.Author;
-import br.rosa.generated.tables.AuthorAddress;
-import br.rosa.generated.tables.City;
-import br.rosa.generated.tables.Post;
+import br.rosa.generated.tables.Alternativa;
+import br.rosa.generated.tables.Banca;
+import br.rosa.generated.tables.Cargo;
+import br.rosa.generated.tables.Concurso;
+import br.rosa.generated.tables.ConcursoCargo;
+import br.rosa.generated.tables.ConcursoTopico;
+import br.rosa.generated.tables.Disciplina;
+import br.rosa.generated.tables.FiltroUsuarioMatConcCargo;
+import br.rosa.generated.tables.FiltroUsuarioMatConcurso;
+import br.rosa.generated.tables.FiltroUsuarioMatDisciplina;
+import br.rosa.generated.tables.FiltroUsuarioMatNivel;
+import br.rosa.generated.tables.FiltroUsuarioMatTopico;
+import br.rosa.generated.tables.FiltroUsuarioMateria;
+import br.rosa.generated.tables.FiltroUsuarioQuestBanca;
+import br.rosa.generated.tables.FiltroUsuarioQuestCargo;
+import br.rosa.generated.tables.FiltroUsuarioQuestConcCar;
+import br.rosa.generated.tables.FiltroUsuarioQuestConcurso;
+import br.rosa.generated.tables.FiltroUsuarioQuestInst;
+import br.rosa.generated.tables.FiltroUsuarioQuestNivel;
+import br.rosa.generated.tables.FiltroUsuarioQuestao;
+import br.rosa.generated.tables.Instituicao;
+import br.rosa.generated.tables.Materia;
+import br.rosa.generated.tables.MateriaTopico;
+import br.rosa.generated.tables.Nivel;
+import br.rosa.generated.tables.Pagamento;
+import br.rosa.generated.tables.Questao;
+import br.rosa.generated.tables.QuestaoConcurso;
+import br.rosa.generated.tables.QuestaoMateria;
+import br.rosa.generated.tables.QuestaoMateriaPosicao;
+import br.rosa.generated.tables.QuestaoTopico;
+import br.rosa.generated.tables.Topico;
+import br.rosa.generated.tables.Usuario;
+import br.rosa.generated.tables.UsuarioMateriaEstudada;
+import br.rosa.generated.tables.UsuarioPro;
 
 
 /**
- * Convenience access to all tables in mtest.
+ * Convenience access to all tables in mquest.
  */
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class Tables {
 
     /**
-     * The table <code>mtest.address</code>.
+     * The table <code>mquest.alternativa</code>.
      */
-    public static final Address ADDRESS = Address.ADDRESS;
+    public static final Alternativa ALTERNATIVA = Alternativa.ALTERNATIVA;
 
     /**
-     * The table <code>mtest.author</code>.
+     * The table <code>mquest.banca</code>.
      */
-    public static final Author AUTHOR = Author.AUTHOR;
+    public static final Banca BANCA = Banca.BANCA;
 
     /**
-     * The table <code>mtest.author_address</code>.
+     * The table <code>mquest.cargo</code>.
      */
-    public static final AuthorAddress AUTHOR_ADDRESS = AuthorAddress.AUTHOR_ADDRESS;
+    public static final Cargo CARGO = Cargo.CARGO;
 
     /**
-     * The table <code>mtest.city</code>.
+     * The table <code>mquest.concurso</code>.
      */
-    public static final City CITY = City.CITY;
+    public static final Concurso CONCURSO = Concurso.CONCURSO;
 
     /**
-     * The table <code>mtest.post</code>.
+     * The table <code>mquest.concurso_cargo</code>.
      */
-    public static final Post POST = Post.POST;
+    public static final ConcursoCargo CONCURSO_CARGO = ConcursoCargo.CONCURSO_CARGO;
+
+    /**
+     * The table <code>mquest.concurso_topico</code>.
+     */
+    public static final ConcursoTopico CONCURSO_TOPICO = ConcursoTopico.CONCURSO_TOPICO;
+
+    /**
+     * The table <code>mquest.disciplina</code>.
+     */
+    public static final Disciplina DISCIPLINA = Disciplina.DISCIPLINA;
+
+    /**
+     * The table <code>mquest.filtro_usuario_mat_conc_cargo</code>.
+     */
+    public static final FiltroUsuarioMatConcCargo FILTRO_USUARIO_MAT_CONC_CARGO = FiltroUsuarioMatConcCargo.FILTRO_USUARIO_MAT_CONC_CARGO;
+
+    /**
+     * The table <code>mquest.filtro_usuario_mat_concurso</code>.
+     */
+    public static final FiltroUsuarioMatConcurso FILTRO_USUARIO_MAT_CONCURSO = FiltroUsuarioMatConcurso.FILTRO_USUARIO_MAT_CONCURSO;
+
+    /**
+     * The table <code>mquest.filtro_usuario_mat_disciplina</code>.
+     */
+    public static final FiltroUsuarioMatDisciplina FILTRO_USUARIO_MAT_DISCIPLINA = FiltroUsuarioMatDisciplina.FILTRO_USUARIO_MAT_DISCIPLINA;
+
+    /**
+     * The table <code>mquest.filtro_usuario_mat_nivel</code>.
+     */
+    public static final FiltroUsuarioMatNivel FILTRO_USUARIO_MAT_NIVEL = FiltroUsuarioMatNivel.FILTRO_USUARIO_MAT_NIVEL;
+
+    /**
+     * The table <code>mquest.filtro_usuario_mat_topico</code>.
+     */
+    public static final FiltroUsuarioMatTopico FILTRO_USUARIO_MAT_TOPICO = FiltroUsuarioMatTopico.FILTRO_USUARIO_MAT_TOPICO;
+
+    /**
+     * The table <code>mquest.filtro_usuario_materia</code>.
+     */
+    public static final FiltroUsuarioMateria FILTRO_USUARIO_MATERIA = FiltroUsuarioMateria.FILTRO_USUARIO_MATERIA;
+
+    /**
+     * The table <code>mquest.filtro_usuario_quest_banca</code>.
+     */
+    public static final FiltroUsuarioQuestBanca FILTRO_USUARIO_QUEST_BANCA = FiltroUsuarioQuestBanca.FILTRO_USUARIO_QUEST_BANCA;
+
+    /**
+     * The table <code>mquest.filtro_usuario_quest_cargo</code>.
+     */
+    public static final FiltroUsuarioQuestCargo FILTRO_USUARIO_QUEST_CARGO = FiltroUsuarioQuestCargo.FILTRO_USUARIO_QUEST_CARGO;
+
+    /**
+     * The table <code>mquest.filtro_usuario_quest_conc_car</code>.
+     */
+    public static final FiltroUsuarioQuestConcCar FILTRO_USUARIO_QUEST_CONC_CAR = FiltroUsuarioQuestConcCar.FILTRO_USUARIO_QUEST_CONC_CAR;
+
+    /**
+     * The table <code>mquest.filtro_usuario_quest_concurso</code>.
+     */
+    public static final FiltroUsuarioQuestConcurso FILTRO_USUARIO_QUEST_CONCURSO = FiltroUsuarioQuestConcurso.FILTRO_USUARIO_QUEST_CONCURSO;
+
+    /**
+     * The table <code>mquest.filtro_usuario_quest_inst</code>.
+     */
+    public static final FiltroUsuarioQuestInst FILTRO_USUARIO_QUEST_INST = FiltroUsuarioQuestInst.FILTRO_USUARIO_QUEST_INST;
+
+    /**
+     * The table <code>mquest.filtro_usuario_quest_nivel</code>.
+     */
+    public static final FiltroUsuarioQuestNivel FILTRO_USUARIO_QUEST_NIVEL = FiltroUsuarioQuestNivel.FILTRO_USUARIO_QUEST_NIVEL;
+
+    /**
+     * The table <code>mquest.filtro_usuario_questao</code>.
+     */
+    public static final FiltroUsuarioQuestao FILTRO_USUARIO_QUESTAO = FiltroUsuarioQuestao.FILTRO_USUARIO_QUESTAO;
+
+    /**
+     * The table <code>mquest.instituicao</code>.
+     */
+    public static final Instituicao INSTITUICAO = Instituicao.INSTITUICAO;
+
+    /**
+     * The table <code>mquest.materia</code>.
+     */
+    public static final Materia MATERIA = Materia.MATERIA;
+
+    /**
+     * The table <code>mquest.materia_topico</code>.
+     */
+    public static final MateriaTopico MATERIA_TOPICO = MateriaTopico.MATERIA_TOPICO;
+
+    /**
+     * The table <code>mquest.nivel</code>.
+     */
+    public static final Nivel NIVEL = Nivel.NIVEL;
+
+    /**
+     * The table <code>mquest.pagamento</code>.
+     */
+    public static final Pagamento PAGAMENTO = Pagamento.PAGAMENTO;
+
+    /**
+     * The table <code>mquest.questao</code>.
+     */
+    public static final Questao QUESTAO = Questao.QUESTAO;
+
+    /**
+     * The table <code>mquest.questao_concurso</code>.
+     */
+    public static final QuestaoConcurso QUESTAO_CONCURSO = QuestaoConcurso.QUESTAO_CONCURSO;
+
+    /**
+     * The table <code>mquest.questao_materia</code>.
+     */
+    public static final QuestaoMateria QUESTAO_MATERIA = QuestaoMateria.QUESTAO_MATERIA;
+
+    /**
+     * The table <code>mquest.questao_materia_posicao</code>.
+     */
+    public static final QuestaoMateriaPosicao QUESTAO_MATERIA_POSICAO = QuestaoMateriaPosicao.QUESTAO_MATERIA_POSICAO;
+
+    /**
+     * The table <code>mquest.questao_topico</code>.
+     */
+    public static final QuestaoTopico QUESTAO_TOPICO = QuestaoTopico.QUESTAO_TOPICO;
+
+    /**
+     * The table <code>mquest.topico</code>.
+     */
+    public static final Topico TOPICO = Topico.TOPICO;
+
+    /**
+     * The table <code>mquest.usuario</code>.
+     */
+    public static final Usuario USUARIO = Usuario.USUARIO;
+
+    /**
+     * The table <code>mquest.usuario_materia_estudada</code>.
+     */
+    public static final UsuarioMateriaEstudada USUARIO_MATERIA_ESTUDADA = UsuarioMateriaEstudada.USUARIO_MATERIA_ESTUDADA;
+
+    /**
+     * The table <code>mquest.usuario_pro</code>.
+     */
+    public static final UsuarioPro USUARIO_PRO = UsuarioPro.USUARIO_PRO;
 }
