@@ -4,74 +4,16 @@
 package br.rosa.generated;
 
 
-import br.rosa.generated.tables.Alternativa;
-import br.rosa.generated.tables.Banca;
-import br.rosa.generated.tables.Cargo;
-import br.rosa.generated.tables.Concurso;
-import br.rosa.generated.tables.ConcursoCargo;
-import br.rosa.generated.tables.ConcursoTopico;
-import br.rosa.generated.tables.Disciplina;
-import br.rosa.generated.tables.FiltroUsuarioMatConcCargo;
-import br.rosa.generated.tables.FiltroUsuarioMatConcurso;
-import br.rosa.generated.tables.FiltroUsuarioMatDisciplina;
-import br.rosa.generated.tables.FiltroUsuarioMatNivel;
-import br.rosa.generated.tables.FiltroUsuarioMatTopico;
-import br.rosa.generated.tables.FiltroUsuarioMateria;
-import br.rosa.generated.tables.FiltroUsuarioQuestBanca;
-import br.rosa.generated.tables.FiltroUsuarioQuestCargo;
-import br.rosa.generated.tables.FiltroUsuarioQuestConcCar;
-import br.rosa.generated.tables.FiltroUsuarioQuestConcurso;
-import br.rosa.generated.tables.FiltroUsuarioQuestInst;
-import br.rosa.generated.tables.FiltroUsuarioQuestNivel;
-import br.rosa.generated.tables.FiltroUsuarioQuestao;
-import br.rosa.generated.tables.Instituicao;
-import br.rosa.generated.tables.Materia;
-import br.rosa.generated.tables.MateriaTopico;
-import br.rosa.generated.tables.Nivel;
-import br.rosa.generated.tables.Pagamento;
-import br.rosa.generated.tables.Questao;
-import br.rosa.generated.tables.QuestaoConcurso;
-import br.rosa.generated.tables.QuestaoMateria;
-import br.rosa.generated.tables.QuestaoMateriaPosicao;
-import br.rosa.generated.tables.QuestaoTopico;
-import br.rosa.generated.tables.Topico;
-import br.rosa.generated.tables.Usuario;
-import br.rosa.generated.tables.UsuarioMateriaEstudada;
-import br.rosa.generated.tables.UsuarioPro;
-import br.rosa.generated.tables.records.AlternativaRecord;
-import br.rosa.generated.tables.records.BancaRecord;
-import br.rosa.generated.tables.records.CargoRecord;
-import br.rosa.generated.tables.records.ConcursoCargoRecord;
-import br.rosa.generated.tables.records.ConcursoRecord;
-import br.rosa.generated.tables.records.ConcursoTopicoRecord;
-import br.rosa.generated.tables.records.DisciplinaRecord;
-import br.rosa.generated.tables.records.FiltroUsuarioMatConcCargoRecord;
-import br.rosa.generated.tables.records.FiltroUsuarioMatConcursoRecord;
-import br.rosa.generated.tables.records.FiltroUsuarioMatDisciplinaRecord;
-import br.rosa.generated.tables.records.FiltroUsuarioMatNivelRecord;
-import br.rosa.generated.tables.records.FiltroUsuarioMatTopicoRecord;
-import br.rosa.generated.tables.records.FiltroUsuarioMateriaRecord;
-import br.rosa.generated.tables.records.FiltroUsuarioQuestBancaRecord;
-import br.rosa.generated.tables.records.FiltroUsuarioQuestCargoRecord;
-import br.rosa.generated.tables.records.FiltroUsuarioQuestConcCarRecord;
-import br.rosa.generated.tables.records.FiltroUsuarioQuestConcursoRecord;
-import br.rosa.generated.tables.records.FiltroUsuarioQuestInstRecord;
-import br.rosa.generated.tables.records.FiltroUsuarioQuestNivelRecord;
-import br.rosa.generated.tables.records.FiltroUsuarioQuestaoRecord;
-import br.rosa.generated.tables.records.InstituicaoRecord;
-import br.rosa.generated.tables.records.MateriaRecord;
-import br.rosa.generated.tables.records.MateriaTopicoRecord;
-import br.rosa.generated.tables.records.NivelRecord;
-import br.rosa.generated.tables.records.PagamentoRecord;
-import br.rosa.generated.tables.records.QuestaoConcursoRecord;
-import br.rosa.generated.tables.records.QuestaoMateriaPosicaoRecord;
-import br.rosa.generated.tables.records.QuestaoMateriaRecord;
-import br.rosa.generated.tables.records.QuestaoRecord;
-import br.rosa.generated.tables.records.QuestaoTopicoRecord;
-import br.rosa.generated.tables.records.TopicoRecord;
-import br.rosa.generated.tables.records.UsuarioMateriaEstudadaRecord;
-import br.rosa.generated.tables.records.UsuarioProRecord;
-import br.rosa.generated.tables.records.UsuarioRecord;
+import br.rosa.generated.tables.Address;
+import br.rosa.generated.tables.Author;
+import br.rosa.generated.tables.AuthorAddress;
+import br.rosa.generated.tables.City;
+import br.rosa.generated.tables.Post;
+import br.rosa.generated.tables.records.AddressRecord;
+import br.rosa.generated.tables.records.AuthorAddressRecord;
+import br.rosa.generated.tables.records.AuthorRecord;
+import br.rosa.generated.tables.records.CityRecord;
+import br.rosa.generated.tables.records.PostRecord;
 
 import org.jooq.ForeignKey;
 import org.jooq.TableField;
@@ -82,7 +24,7 @@ import org.jooq.impl.Internal;
 
 /**
  * A class modelling foreign key relationships and constraints of tables in
- * mquest.
+ * mtest.
  */
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class Keys {
@@ -91,89 +33,17 @@ public class Keys {
     // UNIQUE and PRIMARY KEY definitions
     // -------------------------------------------------------------------------
 
-    public static final UniqueKey<AlternativaRecord> KEY_ALTERNATIVA_PRIMARY = Internal.createUniqueKey(Alternativa.ALTERNATIVA, DSL.name("KEY_alternativa_PRIMARY"), new TableField[] { Alternativa.ALTERNATIVA.ID }, true);
-    public static final UniqueKey<BancaRecord> KEY_BANCA_PRIMARY = Internal.createUniqueKey(Banca.BANCA, DSL.name("KEY_banca_PRIMARY"), new TableField[] { Banca.BANCA.ID }, true);
-    public static final UniqueKey<CargoRecord> KEY_CARGO_PRIMARY = Internal.createUniqueKey(Cargo.CARGO, DSL.name("KEY_cargo_PRIMARY"), new TableField[] { Cargo.CARGO.ID }, true);
-    public static final UniqueKey<ConcursoRecord> KEY_CONCURSO_PRIMARY = Internal.createUniqueKey(Concurso.CONCURSO, DSL.name("KEY_concurso_PRIMARY"), new TableField[] { Concurso.CONCURSO.ID }, true);
-    public static final UniqueKey<ConcursoCargoRecord> KEY_CONCURSO_CARGO_PRIMARY = Internal.createUniqueKey(ConcursoCargo.CONCURSO_CARGO, DSL.name("KEY_concurso_cargo_PRIMARY"), new TableField[] { ConcursoCargo.CONCURSO_CARGO.ID }, true);
-    public static final UniqueKey<ConcursoTopicoRecord> KEY_CONCURSO_TOPICO_PRIMARY = Internal.createUniqueKey(ConcursoTopico.CONCURSO_TOPICO, DSL.name("KEY_concurso_topico_PRIMARY"), new TableField[] { ConcursoTopico.CONCURSO_TOPICO.ID_TOPICO, ConcursoTopico.CONCURSO_TOPICO.ID_CONCURSO_CARGO }, true);
-    public static final UniqueKey<DisciplinaRecord> KEY_DISCIPLINA_PRIMARY = Internal.createUniqueKey(Disciplina.DISCIPLINA, DSL.name("KEY_disciplina_PRIMARY"), new TableField[] { Disciplina.DISCIPLINA.ID }, true);
-    public static final UniqueKey<FiltroUsuarioMatConcCargoRecord> KEY_FILTRO_USUARIO_MAT_CONC_CARGO_PRIMARY = Internal.createUniqueKey(FiltroUsuarioMatConcCargo.FILTRO_USUARIO_MAT_CONC_CARGO, DSL.name("KEY_filtro_usuario_mat_conc_cargo_PRIMARY"), new TableField[] { FiltroUsuarioMatConcCargo.FILTRO_USUARIO_MAT_CONC_CARGO.ID_FILT_USU_MATERIA, FiltroUsuarioMatConcCargo.FILTRO_USUARIO_MAT_CONC_CARGO.ID_CONCURSO_CARGO }, true);
-    public static final UniqueKey<FiltroUsuarioMatConcursoRecord> KEY_FILTRO_USUARIO_MAT_CONCURSO_PRIMARY = Internal.createUniqueKey(FiltroUsuarioMatConcurso.FILTRO_USUARIO_MAT_CONCURSO, DSL.name("KEY_filtro_usuario_mat_concurso_PRIMARY"), new TableField[] { FiltroUsuarioMatConcurso.FILTRO_USUARIO_MAT_CONCURSO.ID_FILT_USU_MATERIA, FiltroUsuarioMatConcurso.FILTRO_USUARIO_MAT_CONCURSO.ID_CONCURSO }, true);
-    public static final UniqueKey<FiltroUsuarioMatDisciplinaRecord> KEY_FILTRO_USUARIO_MAT_DISCIPLINA_PRIMARY = Internal.createUniqueKey(FiltroUsuarioMatDisciplina.FILTRO_USUARIO_MAT_DISCIPLINA, DSL.name("KEY_filtro_usuario_mat_disciplina_PRIMARY"), new TableField[] { FiltroUsuarioMatDisciplina.FILTRO_USUARIO_MAT_DISCIPLINA.ID_FILT_USU_MATERIA, FiltroUsuarioMatDisciplina.FILTRO_USUARIO_MAT_DISCIPLINA.ID_DISCIPLINA }, true);
-    public static final UniqueKey<FiltroUsuarioMatNivelRecord> KEY_FILTRO_USUARIO_MAT_NIVEL_PRIMARY = Internal.createUniqueKey(FiltroUsuarioMatNivel.FILTRO_USUARIO_MAT_NIVEL, DSL.name("KEY_filtro_usuario_mat_nivel_PRIMARY"), new TableField[] { FiltroUsuarioMatNivel.FILTRO_USUARIO_MAT_NIVEL.ID_FILT_USU_MATERIA, FiltroUsuarioMatNivel.FILTRO_USUARIO_MAT_NIVEL.ID_NIVEL }, true);
-    public static final UniqueKey<FiltroUsuarioMatTopicoRecord> KEY_FILTRO_USUARIO_MAT_TOPICO_PRIMARY = Internal.createUniqueKey(FiltroUsuarioMatTopico.FILTRO_USUARIO_MAT_TOPICO, DSL.name("KEY_filtro_usuario_mat_topico_PRIMARY"), new TableField[] { FiltroUsuarioMatTopico.FILTRO_USUARIO_MAT_TOPICO.ID_FILT_USU_MATERIA, FiltroUsuarioMatTopico.FILTRO_USUARIO_MAT_TOPICO.ID_TOPICO }, true);
-    public static final UniqueKey<FiltroUsuarioMateriaRecord> KEY_FILTRO_USUARIO_MATERIA_PRIMARY = Internal.createUniqueKey(FiltroUsuarioMateria.FILTRO_USUARIO_MATERIA, DSL.name("KEY_filtro_usuario_materia_PRIMARY"), new TableField[] { FiltroUsuarioMateria.FILTRO_USUARIO_MATERIA.ID }, true);
-    public static final UniqueKey<FiltroUsuarioQuestBancaRecord> KEY_FILTRO_USUARIO_QUEST_BANCA_PRIMARY = Internal.createUniqueKey(FiltroUsuarioQuestBanca.FILTRO_USUARIO_QUEST_BANCA, DSL.name("KEY_filtro_usuario_quest_banca_PRIMARY"), new TableField[] { FiltroUsuarioQuestBanca.FILTRO_USUARIO_QUEST_BANCA.ID_FILTRO_USU_QUEST, FiltroUsuarioQuestBanca.FILTRO_USUARIO_QUEST_BANCA.ID_BANCA }, true);
-    public static final UniqueKey<FiltroUsuarioQuestCargoRecord> KEY_FILTRO_USUARIO_QUEST_CARGO_PRIMARY = Internal.createUniqueKey(FiltroUsuarioQuestCargo.FILTRO_USUARIO_QUEST_CARGO, DSL.name("KEY_filtro_usuario_quest_cargo_PRIMARY"), new TableField[] { FiltroUsuarioQuestCargo.FILTRO_USUARIO_QUEST_CARGO.ID_FILTRO_USU_QUEST, FiltroUsuarioQuestCargo.FILTRO_USUARIO_QUEST_CARGO.ID_CARGO }, true);
-    public static final UniqueKey<FiltroUsuarioQuestConcCarRecord> KEY_FILTRO_USUARIO_QUEST_CONC_CAR_PRIMARY = Internal.createUniqueKey(FiltroUsuarioQuestConcCar.FILTRO_USUARIO_QUEST_CONC_CAR, DSL.name("KEY_filtro_usuario_quest_conc_car_PRIMARY"), new TableField[] { FiltroUsuarioQuestConcCar.FILTRO_USUARIO_QUEST_CONC_CAR.ID_FILTRO_USU_QUEST, FiltroUsuarioQuestConcCar.FILTRO_USUARIO_QUEST_CONC_CAR.ID_CONCURSO_CARGO }, true);
-    public static final UniqueKey<FiltroUsuarioQuestConcursoRecord> KEY_FILTRO_USUARIO_QUEST_CONCURSO_PRIMARY = Internal.createUniqueKey(FiltroUsuarioQuestConcurso.FILTRO_USUARIO_QUEST_CONCURSO, DSL.name("KEY_filtro_usuario_quest_concurso_PRIMARY"), new TableField[] { FiltroUsuarioQuestConcurso.FILTRO_USUARIO_QUEST_CONCURSO.ID_FILTRO_USU_QUEST, FiltroUsuarioQuestConcurso.FILTRO_USUARIO_QUEST_CONCURSO.ID_CONCURSO }, true);
-    public static final UniqueKey<FiltroUsuarioQuestInstRecord> KEY_FILTRO_USUARIO_QUEST_INST_PRIMARY = Internal.createUniqueKey(FiltroUsuarioQuestInst.FILTRO_USUARIO_QUEST_INST, DSL.name("KEY_filtro_usuario_quest_inst_PRIMARY"), new TableField[] { FiltroUsuarioQuestInst.FILTRO_USUARIO_QUEST_INST.ID_FILTRO_USU_QUEST, FiltroUsuarioQuestInst.FILTRO_USUARIO_QUEST_INST.ID_INSTITUICAO }, true);
-    public static final UniqueKey<FiltroUsuarioQuestNivelRecord> KEY_FILTRO_USUARIO_QUEST_NIVEL_PRIMARY = Internal.createUniqueKey(FiltroUsuarioQuestNivel.FILTRO_USUARIO_QUEST_NIVEL, DSL.name("KEY_filtro_usuario_quest_nivel_PRIMARY"), new TableField[] { FiltroUsuarioQuestNivel.FILTRO_USUARIO_QUEST_NIVEL.ID_FILTRO_USU_QUEST, FiltroUsuarioQuestNivel.FILTRO_USUARIO_QUEST_NIVEL.ID_NIVEL }, true);
-    public static final UniqueKey<FiltroUsuarioQuestaoRecord> KEY_FILTRO_USUARIO_QUESTAO_PRIMARY = Internal.createUniqueKey(FiltroUsuarioQuestao.FILTRO_USUARIO_QUESTAO, DSL.name("KEY_filtro_usuario_questao_PRIMARY"), new TableField[] { FiltroUsuarioQuestao.FILTRO_USUARIO_QUESTAO.ID }, true);
-    public static final UniqueKey<InstituicaoRecord> KEY_INSTITUICAO_PRIMARY = Internal.createUniqueKey(Instituicao.INSTITUICAO, DSL.name("KEY_instituicao_PRIMARY"), new TableField[] { Instituicao.INSTITUICAO.ID }, true);
-    public static final UniqueKey<MateriaRecord> KEY_MATERIA_PRIMARY = Internal.createUniqueKey(Materia.MATERIA, DSL.name("KEY_materia_PRIMARY"), new TableField[] { Materia.MATERIA.ID }, true);
-    public static final UniqueKey<MateriaTopicoRecord> KEY_MATERIA_TOPICO_PRIMARY = Internal.createUniqueKey(MateriaTopico.MATERIA_TOPICO, DSL.name("KEY_materia_topico_PRIMARY"), new TableField[] { MateriaTopico.MATERIA_TOPICO.ID_MATERIA, MateriaTopico.MATERIA_TOPICO.ID_TOPICO }, true);
-    public static final UniqueKey<NivelRecord> KEY_NIVEL_PRIMARY = Internal.createUniqueKey(Nivel.NIVEL, DSL.name("KEY_nivel_PRIMARY"), new TableField[] { Nivel.NIVEL.ID }, true);
-    public static final UniqueKey<PagamentoRecord> KEY_PAGAMENTO_PRIMARY = Internal.createUniqueKey(Pagamento.PAGAMENTO, DSL.name("KEY_pagamento_PRIMARY"), new TableField[] { Pagamento.PAGAMENTO.ID }, true);
-    public static final UniqueKey<QuestaoRecord> KEY_QUESTAO_PRIMARY = Internal.createUniqueKey(Questao.QUESTAO, DSL.name("KEY_questao_PRIMARY"), new TableField[] { Questao.QUESTAO.ID }, true);
-    public static final UniqueKey<QuestaoConcursoRecord> KEY_QUESTAO_CONCURSO_PRIMARY = Internal.createUniqueKey(QuestaoConcurso.QUESTAO_CONCURSO, DSL.name("KEY_questao_concurso_PRIMARY"), new TableField[] { QuestaoConcurso.QUESTAO_CONCURSO.ID }, true);
-    public static final UniqueKey<QuestaoMateriaRecord> KEY_QUESTAO_MATERIA_PRIMARY = Internal.createUniqueKey(QuestaoMateria.QUESTAO_MATERIA, DSL.name("KEY_questao_materia_PRIMARY"), new TableField[] { QuestaoMateria.QUESTAO_MATERIA.ID }, true);
-    public static final UniqueKey<QuestaoMateriaPosicaoRecord> KEY_QUESTAO_MATERIA_POSICAO_PRIMARY = Internal.createUniqueKey(QuestaoMateriaPosicao.QUESTAO_MATERIA_POSICAO, DSL.name("KEY_questao_materia_posicao_PRIMARY"), new TableField[] { QuestaoMateriaPosicao.QUESTAO_MATERIA_POSICAO.ID }, true);
-    public static final UniqueKey<QuestaoTopicoRecord> KEY_QUESTAO_TOPICO_PRIMARY = Internal.createUniqueKey(QuestaoTopico.QUESTAO_TOPICO, DSL.name("KEY_questao_topico_PRIMARY"), new TableField[] { QuestaoTopico.QUESTAO_TOPICO.ID_QUESTAO, QuestaoTopico.QUESTAO_TOPICO.ID_TOPICO }, true);
-    public static final UniqueKey<TopicoRecord> KEY_TOPICO_PRIMARY = Internal.createUniqueKey(Topico.TOPICO, DSL.name("KEY_topico_PRIMARY"), new TableField[] { Topico.TOPICO.ID }, true);
-    public static final UniqueKey<UsuarioRecord> KEY_USUARIO_PRIMARY = Internal.createUniqueKey(Usuario.USUARIO, DSL.name("KEY_usuario_PRIMARY"), new TableField[] { Usuario.USUARIO.ID }, true);
-    public static final UniqueKey<UsuarioMateriaEstudadaRecord> KEY_USUARIO_MATERIA_ESTUDADA_PRIMARY = Internal.createUniqueKey(UsuarioMateriaEstudada.USUARIO_MATERIA_ESTUDADA, DSL.name("KEY_usuario_materia_estudada_PRIMARY"), new TableField[] { UsuarioMateriaEstudada.USUARIO_MATERIA_ESTUDADA.ID_USUARIO, UsuarioMateriaEstudada.USUARIO_MATERIA_ESTUDADA.ID_MATERIA }, true);
-    public static final UniqueKey<UsuarioProRecord> KEY_USUARIO_PRO_PRIMARY = Internal.createUniqueKey(UsuarioPro.USUARIO_PRO, DSL.name("KEY_usuario_pro_PRIMARY"), new TableField[] { UsuarioPro.USUARIO_PRO.ID }, true);
+    public static final UniqueKey<AddressRecord> KEY_ADDRESS_PRIMARY = Internal.createUniqueKey(Address.ADDRESS, DSL.name("KEY_address_PRIMARY"), new TableField[] { Address.ADDRESS.ID }, true);
+    public static final UniqueKey<AuthorRecord> KEY_AUTHOR_PRIMARY = Internal.createUniqueKey(Author.AUTHOR, DSL.name("KEY_author_PRIMARY"), new TableField[] { Author.AUTHOR.ID }, true);
+    public static final UniqueKey<CityRecord> KEY_CITY_PRIMARY = Internal.createUniqueKey(City.CITY, DSL.name("KEY_city_PRIMARY"), new TableField[] { City.CITY.ID }, true);
+    public static final UniqueKey<PostRecord> KEY_POST_PRIMARY = Internal.createUniqueKey(Post.POST, DSL.name("KEY_post_PRIMARY"), new TableField[] { Post.POST.ID }, true);
 
     // -------------------------------------------------------------------------
     // FOREIGN KEY definitions
     // -------------------------------------------------------------------------
 
-    public static final ForeignKey<AlternativaRecord, QuestaoRecord> FK_ALTERNATIVA_QUESTAO = Internal.createForeignKey(Alternativa.ALTERNATIVA, DSL.name("fk_alternativa_questao"), new TableField[] { Alternativa.ALTERNATIVA.ID_QUESTAO }, Keys.KEY_QUESTAO_PRIMARY, new TableField[] { Questao.QUESTAO.ID }, true);
-    public static final ForeignKey<CargoRecord, NivelRecord> FK_CARGO_NIVEL = Internal.createForeignKey(Cargo.CARGO, DSL.name("fk_cargo_nivel"), new TableField[] { Cargo.CARGO.ID_NIVEL }, Keys.KEY_NIVEL_PRIMARY, new TableField[] { Nivel.NIVEL.ID }, true);
-    public static final ForeignKey<ConcursoRecord, BancaRecord> FK_CONCURSO_BANCA = Internal.createForeignKey(Concurso.CONCURSO, DSL.name("fk_concurso_banca"), new TableField[] { Concurso.CONCURSO.ID_BANCA }, Keys.KEY_BANCA_PRIMARY, new TableField[] { Banca.BANCA.ID }, true);
-    public static final ForeignKey<ConcursoRecord, InstituicaoRecord> FK_CONCURSO_INSTITUICAO = Internal.createForeignKey(Concurso.CONCURSO, DSL.name("fk_concurso_instituicao"), new TableField[] { Concurso.CONCURSO.ID_INSTITUICAO }, Keys.KEY_INSTITUICAO_PRIMARY, new TableField[] { Instituicao.INSTITUICAO.ID }, true);
-    public static final ForeignKey<ConcursoCargoRecord, CargoRecord> FK_CONCURSO_CARGO_CARGO = Internal.createForeignKey(ConcursoCargo.CONCURSO_CARGO, DSL.name("fk_concurso_cargo_cargo"), new TableField[] { ConcursoCargo.CONCURSO_CARGO.ID_CARGO }, Keys.KEY_CARGO_PRIMARY, new TableField[] { Cargo.CARGO.ID }, true);
-    public static final ForeignKey<ConcursoCargoRecord, ConcursoRecord> FK_CONCURSO_CARGO_CONCURSO = Internal.createForeignKey(ConcursoCargo.CONCURSO_CARGO, DSL.name("fk_concurso_cargo_concurso"), new TableField[] { ConcursoCargo.CONCURSO_CARGO.ID_CONCURSO }, Keys.KEY_CONCURSO_PRIMARY, new TableField[] { Concurso.CONCURSO.ID }, true);
-    public static final ForeignKey<ConcursoTopicoRecord, ConcursoCargoRecord> FK_CONCURSO_TOPICO_CONCURSO_CARGO = Internal.createForeignKey(ConcursoTopico.CONCURSO_TOPICO, DSL.name("fk_concurso_topico_concurso_cargo"), new TableField[] { ConcursoTopico.CONCURSO_TOPICO.ID_CONCURSO_CARGO }, Keys.KEY_CONCURSO_CARGO_PRIMARY, new TableField[] { ConcursoCargo.CONCURSO_CARGO.ID }, true);
-    public static final ForeignKey<ConcursoTopicoRecord, TopicoRecord> FK_CONCURSO_TOPICO_TOPICO = Internal.createForeignKey(ConcursoTopico.CONCURSO_TOPICO, DSL.name("fk_concurso_topico_topico"), new TableField[] { ConcursoTopico.CONCURSO_TOPICO.ID_TOPICO }, Keys.KEY_TOPICO_PRIMARY, new TableField[] { Topico.TOPICO.ID }, true);
-    public static final ForeignKey<FiltroUsuarioMatConcCargoRecord, ConcursoCargoRecord> FK_FILT_USU_MAT_CONC_CAR_CONC_CAR = Internal.createForeignKey(FiltroUsuarioMatConcCargo.FILTRO_USUARIO_MAT_CONC_CARGO, DSL.name("fk_filt_usu_mat_conc_car_conc_car"), new TableField[] { FiltroUsuarioMatConcCargo.FILTRO_USUARIO_MAT_CONC_CARGO.ID_CONCURSO_CARGO }, Keys.KEY_CONCURSO_CARGO_PRIMARY, new TableField[] { ConcursoCargo.CONCURSO_CARGO.ID }, true);
-    public static final ForeignKey<FiltroUsuarioMatConcCargoRecord, FiltroUsuarioMateriaRecord> FK_FILT_USU_MAT_CONC_CAR_FILT = Internal.createForeignKey(FiltroUsuarioMatConcCargo.FILTRO_USUARIO_MAT_CONC_CARGO, DSL.name("fk_filt_usu_mat_conc_car_filt"), new TableField[] { FiltroUsuarioMatConcCargo.FILTRO_USUARIO_MAT_CONC_CARGO.ID_FILT_USU_MATERIA }, Keys.KEY_FILTRO_USUARIO_MATERIA_PRIMARY, new TableField[] { FiltroUsuarioMateria.FILTRO_USUARIO_MATERIA.ID }, true);
-    public static final ForeignKey<FiltroUsuarioMatConcursoRecord, ConcursoRecord> FK_FILTRO_USU_MAT_CONC_CONC = Internal.createForeignKey(FiltroUsuarioMatConcurso.FILTRO_USUARIO_MAT_CONCURSO, DSL.name("fk_filtro_usu_mat_conc_conc"), new TableField[] { FiltroUsuarioMatConcurso.FILTRO_USUARIO_MAT_CONCURSO.ID_CONCURSO }, Keys.KEY_CONCURSO_PRIMARY, new TableField[] { Concurso.CONCURSO.ID }, true);
-    public static final ForeignKey<FiltroUsuarioMatConcursoRecord, FiltroUsuarioMateriaRecord> FK_FILTRO_USU_MAT_CONC_FILT = Internal.createForeignKey(FiltroUsuarioMatConcurso.FILTRO_USUARIO_MAT_CONCURSO, DSL.name("fk_filtro_usu_mat_conc_filt"), new TableField[] { FiltroUsuarioMatConcurso.FILTRO_USUARIO_MAT_CONCURSO.ID_FILT_USU_MATERIA }, Keys.KEY_FILTRO_USUARIO_MATERIA_PRIMARY, new TableField[] { FiltroUsuarioMateria.FILTRO_USUARIO_MATERIA.ID }, true);
-    public static final ForeignKey<FiltroUsuarioMatDisciplinaRecord, DisciplinaRecord> FK_FILTRO_USU_MAT_DISC_DISC = Internal.createForeignKey(FiltroUsuarioMatDisciplina.FILTRO_USUARIO_MAT_DISCIPLINA, DSL.name("fk_filtro_usu_mat_disc_disc"), new TableField[] { FiltroUsuarioMatDisciplina.FILTRO_USUARIO_MAT_DISCIPLINA.ID_DISCIPLINA }, Keys.KEY_DISCIPLINA_PRIMARY, new TableField[] { Disciplina.DISCIPLINA.ID }, true);
-    public static final ForeignKey<FiltroUsuarioMatDisciplinaRecord, FiltroUsuarioMateriaRecord> FK_FILTRO_USU_MAT_DISC_FILT = Internal.createForeignKey(FiltroUsuarioMatDisciplina.FILTRO_USUARIO_MAT_DISCIPLINA, DSL.name("fk_filtro_usu_mat_disc_filt"), new TableField[] { FiltroUsuarioMatDisciplina.FILTRO_USUARIO_MAT_DISCIPLINA.ID_FILT_USU_MATERIA }, Keys.KEY_FILTRO_USUARIO_MATERIA_PRIMARY, new TableField[] { FiltroUsuarioMateria.FILTRO_USUARIO_MATERIA.ID }, true);
-    public static final ForeignKey<FiltroUsuarioMatNivelRecord, FiltroUsuarioMateriaRecord> FK_FILTRO_USU_MAT_NIVEL_FILT = Internal.createForeignKey(FiltroUsuarioMatNivel.FILTRO_USUARIO_MAT_NIVEL, DSL.name("fk_filtro_usu_mat_nivel_filt"), new TableField[] { FiltroUsuarioMatNivel.FILTRO_USUARIO_MAT_NIVEL.ID_FILT_USU_MATERIA }, Keys.KEY_FILTRO_USUARIO_MATERIA_PRIMARY, new TableField[] { FiltroUsuarioMateria.FILTRO_USUARIO_MATERIA.ID }, true);
-    public static final ForeignKey<FiltroUsuarioMatNivelRecord, NivelRecord> FK_FILTRO_USU_MAT_NIVEL_NIVEL = Internal.createForeignKey(FiltroUsuarioMatNivel.FILTRO_USUARIO_MAT_NIVEL, DSL.name("fk_filtro_usu_mat_nivel_nivel"), new TableField[] { FiltroUsuarioMatNivel.FILTRO_USUARIO_MAT_NIVEL.ID_NIVEL }, Keys.KEY_NIVEL_PRIMARY, new TableField[] { Nivel.NIVEL.ID }, true);
-    public static final ForeignKey<FiltroUsuarioMatTopicoRecord, FiltroUsuarioMateriaRecord> FK_FILTRO_USU_MAT_TOP_FILT = Internal.createForeignKey(FiltroUsuarioMatTopico.FILTRO_USUARIO_MAT_TOPICO, DSL.name("fk_filtro_usu_mat_top_filt"), new TableField[] { FiltroUsuarioMatTopico.FILTRO_USUARIO_MAT_TOPICO.ID_FILT_USU_MATERIA }, Keys.KEY_FILTRO_USUARIO_MATERIA_PRIMARY, new TableField[] { FiltroUsuarioMateria.FILTRO_USUARIO_MATERIA.ID }, true);
-    public static final ForeignKey<FiltroUsuarioMatTopicoRecord, TopicoRecord> FK_FILTRO_USU_MAT_TOP_TOP = Internal.createForeignKey(FiltroUsuarioMatTopico.FILTRO_USUARIO_MAT_TOPICO, DSL.name("fk_filtro_usu_mat_top_top"), new TableField[] { FiltroUsuarioMatTopico.FILTRO_USUARIO_MAT_TOPICO.ID_TOPICO }, Keys.KEY_TOPICO_PRIMARY, new TableField[] { Topico.TOPICO.ID }, true);
-    public static final ForeignKey<FiltroUsuarioMateriaRecord, UsuarioRecord> FK_FILTRO_USUARIO_MAT_USUARIO = Internal.createForeignKey(FiltroUsuarioMateria.FILTRO_USUARIO_MATERIA, DSL.name("fk_filtro_usuario_mat_usuario"), new TableField[] { FiltroUsuarioMateria.FILTRO_USUARIO_MATERIA.ID_USUARIO }, Keys.KEY_USUARIO_PRIMARY, new TableField[] { Usuario.USUARIO.ID }, true);
-    public static final ForeignKey<FiltroUsuarioQuestBancaRecord, BancaRecord> FK_FILT_USU_QUEST_BAN_BAN = Internal.createForeignKey(FiltroUsuarioQuestBanca.FILTRO_USUARIO_QUEST_BANCA, DSL.name("fk_filt_usu_quest_ban_ban"), new TableField[] { FiltroUsuarioQuestBanca.FILTRO_USUARIO_QUEST_BANCA.ID_BANCA }, Keys.KEY_BANCA_PRIMARY, new TableField[] { Banca.BANCA.ID }, true);
-    public static final ForeignKey<FiltroUsuarioQuestBancaRecord, FiltroUsuarioQuestaoRecord> FK_FILT_USU_QUEST_BAN_FUQ = Internal.createForeignKey(FiltroUsuarioQuestBanca.FILTRO_USUARIO_QUEST_BANCA, DSL.name("fk_filt_usu_quest_ban_fuq"), new TableField[] { FiltroUsuarioQuestBanca.FILTRO_USUARIO_QUEST_BANCA.ID_FILTRO_USU_QUEST }, Keys.KEY_FILTRO_USUARIO_QUESTAO_PRIMARY, new TableField[] { FiltroUsuarioQuestao.FILTRO_USUARIO_QUESTAO.ID }, true);
-    public static final ForeignKey<FiltroUsuarioQuestCargoRecord, CargoRecord> FK_FILT_USU_QUEST_CAR_CAR = Internal.createForeignKey(FiltroUsuarioQuestCargo.FILTRO_USUARIO_QUEST_CARGO, DSL.name("fk_filt_usu_quest_car_car"), new TableField[] { FiltroUsuarioQuestCargo.FILTRO_USUARIO_QUEST_CARGO.ID_CARGO }, Keys.KEY_CARGO_PRIMARY, new TableField[] { Cargo.CARGO.ID }, true);
-    public static final ForeignKey<FiltroUsuarioQuestCargoRecord, FiltroUsuarioQuestaoRecord> FK_FILT_USU_QUEST_CAR_FUQ = Internal.createForeignKey(FiltroUsuarioQuestCargo.FILTRO_USUARIO_QUEST_CARGO, DSL.name("fk_filt_usu_quest_car_fuq"), new TableField[] { FiltroUsuarioQuestCargo.FILTRO_USUARIO_QUEST_CARGO.ID_FILTRO_USU_QUEST }, Keys.KEY_FILTRO_USUARIO_QUESTAO_PRIMARY, new TableField[] { FiltroUsuarioQuestao.FILTRO_USUARIO_QUESTAO.ID }, true);
-    public static final ForeignKey<FiltroUsuarioQuestConcCarRecord, ConcursoCargoRecord> FK_FILT_USU_QUEST_CONC_CAR_CONCAR = Internal.createForeignKey(FiltroUsuarioQuestConcCar.FILTRO_USUARIO_QUEST_CONC_CAR, DSL.name("fk_filt_usu_quest_conc_car_concar"), new TableField[] { FiltroUsuarioQuestConcCar.FILTRO_USUARIO_QUEST_CONC_CAR.ID_CONCURSO_CARGO }, Keys.KEY_CONCURSO_CARGO_PRIMARY, new TableField[] { ConcursoCargo.CONCURSO_CARGO.ID }, true);
-    public static final ForeignKey<FiltroUsuarioQuestConcCarRecord, FiltroUsuarioQuestaoRecord> FK_FILT_USU_QUEST_CONC_CAR_FUQ = Internal.createForeignKey(FiltroUsuarioQuestConcCar.FILTRO_USUARIO_QUEST_CONC_CAR, DSL.name("fk_filt_usu_quest_conc_car_fuq"), new TableField[] { FiltroUsuarioQuestConcCar.FILTRO_USUARIO_QUEST_CONC_CAR.ID_FILTRO_USU_QUEST }, Keys.KEY_FILTRO_USUARIO_QUESTAO_PRIMARY, new TableField[] { FiltroUsuarioQuestao.FILTRO_USUARIO_QUESTAO.ID }, true);
-    public static final ForeignKey<FiltroUsuarioQuestConcursoRecord, ConcursoRecord> FK_FILT_USU_QUEST_CONC_CONC = Internal.createForeignKey(FiltroUsuarioQuestConcurso.FILTRO_USUARIO_QUEST_CONCURSO, DSL.name("fk_filt_usu_quest_conc_conc"), new TableField[] { FiltroUsuarioQuestConcurso.FILTRO_USUARIO_QUEST_CONCURSO.ID_CONCURSO }, Keys.KEY_CONCURSO_PRIMARY, new TableField[] { Concurso.CONCURSO.ID }, true);
-    public static final ForeignKey<FiltroUsuarioQuestConcursoRecord, FiltroUsuarioQuestaoRecord> FK_FILT_USU_QUEST_CONC_FUQ = Internal.createForeignKey(FiltroUsuarioQuestConcurso.FILTRO_USUARIO_QUEST_CONCURSO, DSL.name("fk_filt_usu_quest_conc_fuq"), new TableField[] { FiltroUsuarioQuestConcurso.FILTRO_USUARIO_QUEST_CONCURSO.ID_FILTRO_USU_QUEST }, Keys.KEY_FILTRO_USUARIO_QUESTAO_PRIMARY, new TableField[] { FiltroUsuarioQuestao.FILTRO_USUARIO_QUESTAO.ID }, true);
-    public static final ForeignKey<FiltroUsuarioQuestInstRecord, FiltroUsuarioQuestaoRecord> FK_FILT_USU_QUEST_INT_FUQ = Internal.createForeignKey(FiltroUsuarioQuestInst.FILTRO_USUARIO_QUEST_INST, DSL.name("fk_filt_usu_quest_int_fuq"), new TableField[] { FiltroUsuarioQuestInst.FILTRO_USUARIO_QUEST_INST.ID_FILTRO_USU_QUEST }, Keys.KEY_FILTRO_USUARIO_QUESTAO_PRIMARY, new TableField[] { FiltroUsuarioQuestao.FILTRO_USUARIO_QUESTAO.ID }, true);
-    public static final ForeignKey<FiltroUsuarioQuestInstRecord, InstituicaoRecord> FK_FILT_USU_QUEST_INT_INST = Internal.createForeignKey(FiltroUsuarioQuestInst.FILTRO_USUARIO_QUEST_INST, DSL.name("fk_filt_usu_quest_int_inst"), new TableField[] { FiltroUsuarioQuestInst.FILTRO_USUARIO_QUEST_INST.ID_INSTITUICAO }, Keys.KEY_INSTITUICAO_PRIMARY, new TableField[] { Instituicao.INSTITUICAO.ID }, true);
-    public static final ForeignKey<FiltroUsuarioQuestNivelRecord, FiltroUsuarioQuestaoRecord> FK_FILT_USU_QUEST_NIV_FUQ = Internal.createForeignKey(FiltroUsuarioQuestNivel.FILTRO_USUARIO_QUEST_NIVEL, DSL.name("fk_filt_usu_quest_niv_fuq"), new TableField[] { FiltroUsuarioQuestNivel.FILTRO_USUARIO_QUEST_NIVEL.ID_FILTRO_USU_QUEST }, Keys.KEY_FILTRO_USUARIO_QUESTAO_PRIMARY, new TableField[] { FiltroUsuarioQuestao.FILTRO_USUARIO_QUESTAO.ID }, true);
-    public static final ForeignKey<FiltroUsuarioQuestNivelRecord, NivelRecord> FK_FILT_USU_QUEST_NIV_NIV = Internal.createForeignKey(FiltroUsuarioQuestNivel.FILTRO_USUARIO_QUEST_NIVEL, DSL.name("fk_filt_usu_quest_niv_niv"), new TableField[] { FiltroUsuarioQuestNivel.FILTRO_USUARIO_QUEST_NIVEL.ID_NIVEL }, Keys.KEY_NIVEL_PRIMARY, new TableField[] { Nivel.NIVEL.ID }, true);
-    public static final ForeignKey<FiltroUsuarioQuestaoRecord, UsuarioRecord> FK_FILTRO_USU_QUEST_USUARIO = Internal.createForeignKey(FiltroUsuarioQuestao.FILTRO_USUARIO_QUESTAO, DSL.name("fk_filtro_usu_quest_usuario"), new TableField[] { FiltroUsuarioQuestao.FILTRO_USUARIO_QUESTAO.ID_USUARIO }, Keys.KEY_USUARIO_PRIMARY, new TableField[] { Usuario.USUARIO.ID }, true);
-    public static final ForeignKey<MateriaTopicoRecord, MateriaRecord> FK_MATERIA_TOPICO_MATERIA = Internal.createForeignKey(MateriaTopico.MATERIA_TOPICO, DSL.name("fk_materia_topico_materia"), new TableField[] { MateriaTopico.MATERIA_TOPICO.ID_MATERIA }, Keys.KEY_MATERIA_PRIMARY, new TableField[] { Materia.MATERIA.ID }, true);
-    public static final ForeignKey<MateriaTopicoRecord, TopicoRecord> FK_MATERIA_TOPICO_TOPICO = Internal.createForeignKey(MateriaTopico.MATERIA_TOPICO, DSL.name("fk_materia_topico_topico"), new TableField[] { MateriaTopico.MATERIA_TOPICO.ID_TOPICO }, Keys.KEY_TOPICO_PRIMARY, new TableField[] { Topico.TOPICO.ID }, true);
-    public static final ForeignKey<PagamentoRecord, UsuarioRecord> FK_PAGAMENTO_USUARIO = Internal.createForeignKey(Pagamento.PAGAMENTO, DSL.name("fk_pagamento_usuario"), new TableField[] { Pagamento.PAGAMENTO.ID_USUARIO }, Keys.KEY_USUARIO_PRIMARY, new TableField[] { Usuario.USUARIO.ID }, true);
-    public static final ForeignKey<QuestaoConcursoRecord, ConcursoCargoRecord> FK_QUESTAO_CONCURSO_CONCURSO_CARGO = Internal.createForeignKey(QuestaoConcurso.QUESTAO_CONCURSO, DSL.name("fk_questao_concurso_concurso_cargo"), new TableField[] { QuestaoConcurso.QUESTAO_CONCURSO.ID_CONCURSO_CARGO }, Keys.KEY_CONCURSO_CARGO_PRIMARY, new TableField[] { ConcursoCargo.CONCURSO_CARGO.ID }, true);
-    public static final ForeignKey<QuestaoConcursoRecord, QuestaoRecord> FK_QUESTAO_CONCURSO_QUESTAO = Internal.createForeignKey(QuestaoConcurso.QUESTAO_CONCURSO, DSL.name("fk_questao_concurso_questao"), new TableField[] { QuestaoConcurso.QUESTAO_CONCURSO.ID_QUESTAO }, Keys.KEY_QUESTAO_PRIMARY, new TableField[] { Questao.QUESTAO.ID }, true);
-    public static final ForeignKey<QuestaoMateriaRecord, MateriaRecord> FK_QUESTAO_MATERIA_MATERIA = Internal.createForeignKey(QuestaoMateria.QUESTAO_MATERIA, DSL.name("fk_questao_materia_materia"), new TableField[] { QuestaoMateria.QUESTAO_MATERIA.ID_MATERIA }, Keys.KEY_MATERIA_PRIMARY, new TableField[] { Materia.MATERIA.ID }, true);
-    public static final ForeignKey<QuestaoMateriaRecord, QuestaoRecord> FK_QUESTAO_MATERIA_QUESTAO = Internal.createForeignKey(QuestaoMateria.QUESTAO_MATERIA, DSL.name("fk_questao_materia_questao"), new TableField[] { QuestaoMateria.QUESTAO_MATERIA.ID_QUESTAO }, Keys.KEY_QUESTAO_PRIMARY, new TableField[] { Questao.QUESTAO.ID }, true);
-    public static final ForeignKey<QuestaoMateriaPosicaoRecord, QuestaoMateriaRecord> FK_QUESTAO_MATERIA_POS_QUEST_MATERIA = Internal.createForeignKey(QuestaoMateriaPosicao.QUESTAO_MATERIA_POSICAO, DSL.name("fk_questao_materia_pos_quest_materia"), new TableField[] { QuestaoMateriaPosicao.QUESTAO_MATERIA_POSICAO.ID_QUESTAO_MATERIA }, Keys.KEY_QUESTAO_MATERIA_PRIMARY, new TableField[] { QuestaoMateria.QUESTAO_MATERIA.ID }, true);
-    public static final ForeignKey<QuestaoTopicoRecord, QuestaoRecord> FK_QUESTAO_TOP_QUESTAO = Internal.createForeignKey(QuestaoTopico.QUESTAO_TOPICO, DSL.name("fk_questao_top_questao"), new TableField[] { QuestaoTopico.QUESTAO_TOPICO.ID_QUESTAO }, Keys.KEY_QUESTAO_PRIMARY, new TableField[] { Questao.QUESTAO.ID }, true);
-    public static final ForeignKey<QuestaoTopicoRecord, TopicoRecord> FK_QUESTAO_TOP_TOPICO = Internal.createForeignKey(QuestaoTopico.QUESTAO_TOPICO, DSL.name("fk_questao_top_topico"), new TableField[] { QuestaoTopico.QUESTAO_TOPICO.ID_TOPICO }, Keys.KEY_TOPICO_PRIMARY, new TableField[] { Topico.TOPICO.ID }, true);
-    public static final ForeignKey<TopicoRecord, DisciplinaRecord> FK_TOPICO_DISCIPLINA = Internal.createForeignKey(Topico.TOPICO, DSL.name("fk_topico_disciplina"), new TableField[] { Topico.TOPICO.ID_DISCIPLINA }, Keys.KEY_DISCIPLINA_PRIMARY, new TableField[] { Disciplina.DISCIPLINA.ID }, true);
-    public static final ForeignKey<UsuarioMateriaEstudadaRecord, MateriaRecord> FK_USUARIO_MATERIA_EST_MATERIA = Internal.createForeignKey(UsuarioMateriaEstudada.USUARIO_MATERIA_ESTUDADA, DSL.name("fk_usuario_materia_est_materia"), new TableField[] { UsuarioMateriaEstudada.USUARIO_MATERIA_ESTUDADA.ID_MATERIA }, Keys.KEY_MATERIA_PRIMARY, new TableField[] { Materia.MATERIA.ID }, true);
-    public static final ForeignKey<UsuarioMateriaEstudadaRecord, UsuarioRecord> FK_USUARIO_MATERIA_EST_USUARIO = Internal.createForeignKey(UsuarioMateriaEstudada.USUARIO_MATERIA_ESTUDADA, DSL.name("fk_usuario_materia_est_usuario"), new TableField[] { UsuarioMateriaEstudada.USUARIO_MATERIA_ESTUDADA.ID_USUARIO }, Keys.KEY_USUARIO_PRIMARY, new TableField[] { Usuario.USUARIO.ID }, true);
-    public static final ForeignKey<UsuarioProRecord, PagamentoRecord> FK_USUARIO_PRO_PAGAMENTO = Internal.createForeignKey(UsuarioPro.USUARIO_PRO, DSL.name("fk_usuario_pro_pagamento"), new TableField[] { UsuarioPro.USUARIO_PRO.ID_PAGAMENTO }, Keys.KEY_PAGAMENTO_PRIMARY, new TableField[] { Pagamento.PAGAMENTO.ID }, true);
+    public static final ForeignKey<AddressRecord, CityRecord> FK_ADDRESS_CITY = Internal.createForeignKey(Address.ADDRESS, DSL.name("FK_ADDRESS_CITY"), new TableField[] { Address.ADDRESS.ID_CITY }, Keys.KEY_CITY_PRIMARY, new TableField[] { City.CITY.ID }, true);
+    public static final ForeignKey<AuthorAddressRecord, AddressRecord> FK_AUT_ADD_ADDRESS = Internal.createForeignKey(AuthorAddress.AUTHOR_ADDRESS, DSL.name("FK_AUT_ADD_ADDRESS"), new TableField[] { AuthorAddress.AUTHOR_ADDRESS.ID_ADDRESS }, Keys.KEY_ADDRESS_PRIMARY, new TableField[] { Address.ADDRESS.ID }, true);
+    public static final ForeignKey<AuthorAddressRecord, AuthorRecord> FK_AUT_ADD_AUTHOR = Internal.createForeignKey(AuthorAddress.AUTHOR_ADDRESS, DSL.name("FK_AUT_ADD_AUTHOR"), new TableField[] { AuthorAddress.AUTHOR_ADDRESS.ID_AUTHOR }, Keys.KEY_AUTHOR_PRIMARY, new TableField[] { Author.AUTHOR.ID }, true);
+    public static final ForeignKey<PostRecord, AuthorRecord> FK_POST_AUTHOR = Internal.createForeignKey(Post.POST, DSL.name("FK_POST_AUTHOR"), new TableField[] { Post.POST.ID_AUTHOR }, Keys.KEY_AUTHOR_PRIMARY, new TableField[] { Author.AUTHOR.ID }, true);
 }

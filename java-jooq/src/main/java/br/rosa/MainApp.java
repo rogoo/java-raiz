@@ -1,6 +1,6 @@
 package br.rosa;
 
-import br.rosa.service.DeleteService;
+import br.rosa.service.SelectService;
 import org.jooq.DSLContext;
 import org.jooq.SQLDialect;
 import org.jooq.conf.RenderImplicitJoinType;
@@ -17,17 +17,17 @@ public class MainApp {
     public static void main(String[] asdf) {
         String user = "admin6";
         String pass = "admin6";
-        String url = "jdbc:mysql://localhost:3306/mquest";
+        String url = "jdbc:mysql://localhost:3306/mtest";
 
         try (Connection conn = DriverManager.getConnection(url, user, pass)) {
             context = using(conn, SQLDialect.MYSQL);
             context.configuration().settings()
                     .withRenderImplicitJoinToManyType(RenderImplicitJoinType.LEFT_JOIN);
 
-            //SelectService.selectTableRecord(context);
-            //InsertService.insertNivel(context, new NivelVO("rod"));
-            //UpdateService.udateNivel(context, new NivelVO(1, "rodrigo"));
-            DeleteService.deleteNivel(context, 1);
+            SelectService.selectTest(context);
+            // InsertService.insertNivel(context, new NivelVO("rod"));
+            // UpdateService.udateNivel(context, new NivelVO(1, "rodrigo"));
+            // DeleteService.deleteNivel(context, 1);
         } catch (Exception e) {
             e.printStackTrace();
         }
