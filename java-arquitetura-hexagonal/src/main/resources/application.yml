@@ -1,0 +1,39 @@
+server:
+  port: 8089
+spring:
+  application:
+    name: shop-hexagonal
+  datasource:
+    url: jdbc:h2:mem:shop;DB_CLOSE_DELAY=-1
+    username: sa
+    password: ""
+    driver-class-name: org.h2.Driver
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    open-in-view: false
+    properties:
+      hibernate.format_sql: true
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+  kafka:
+    bootstrap-servers: ${KAFKA_BOOTSTRAP_SERVERS:localhost:9092}
+    consumer:
+      group-id: shop-orders
+      auto-offset-reset: earliest
+      # Values stay Strings on the way in and on the way to the DLT; the adapter
+      # itself decides what the bytes mean.
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+
+shop:
+  kafka:
+    # Set to false to run the app with no broker at all.
+    enabled: true
+    orders-topic: orders.place
+
+logging:
+  level:
+    com.example.shop: DEBUG
